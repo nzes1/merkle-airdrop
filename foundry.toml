@@ -1,0 +1,34 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+ignored_error_codes = [
+    9302,
+] # Ignore the return value warning from low level calls
+ignored_warnings_from = ["lib/"] # Ignore warnings from lib path
+
+# Configures permissions for cheatcodes that touch the filesystem
+fs_permissions = [{ access = "read-write", path = "./" }]
+
+# Formatter
+[fmt]
+multiline_func_header = "all" # Or  params_first
+contract_new_lines = true
+line_length = 120
+#bracket_spacing = true
+wrap_comments = true
+sort_imports = true
+number_underscore = "thousands"
+ignore = [ "./lib/**/*"] # Paths to ignore from formatting. Removed "./script/**/*",
+single_line_statement_blocks = "single"
+single_line_imports = true
+
+# Linter
+[lint]
+#lint_on_build = false
+exclude_lints = ["screaming-snake-case-immutable", "mixed-case-variable"]
+ignore = ["./test/**/*"]
+
+# Fuzzing configs
+[fuzz]
+runs = 512

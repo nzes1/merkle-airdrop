@@ -1,0 +1,9 @@
+{
+    "[solidity]": {
+        "editor.defaultFormatter": "JuanBlanco.solidity"
+    },
+
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
+}
