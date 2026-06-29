@@ -8,7 +8,11 @@ ignored_error_codes = [
 ignored_warnings_from = ["lib/"] # Ignore warnings from lib path
 
 # Configures permissions for cheatcodes that touch the filesystem
-fs_permissions = [{ access = "read-write", path = "./" }]
+fs_permissions = [
+    { access = "read-write", path = "./" }, 
+    { access = "read", path = "./broadcast" },
+    { access = "read", path = "./reports" },
+]
 
 # Formatter
 [fmt]
